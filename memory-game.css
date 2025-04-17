@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #cceeff, #f0faff);
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  header {
+    background-color: #3498db;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f0faff;
+  }
+  
+  main {
+    padding: 30px;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .game-section {
+    background-color: #ffffffd0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .card {
+    aspect-ratio: 1 / 1;
+    background-color: #3498db;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .card:hover {
+    background-color: #2980b9;
+  }
+  
+  .card.flipped {
+    background-color: white;
+    color: #333;
+    border: 2px solid #3498db;
+  }
+  
+  .card.matched {
+    background-color: #e8f4fc;
+    border: 2px solid #2ecc71;
+    color: #333;
+    cursor: default;
+  }
+  
+  .message {
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .reset-button {
+    display: block;
+    margin: auto;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #2980b9;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    .game-board {
+      gap: 5px;
+    }
+    .card {
+      font-size: 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

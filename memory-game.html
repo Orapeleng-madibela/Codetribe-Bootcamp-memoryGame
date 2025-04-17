@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="memory-game.css">
+</head>
+<body>
+
+    <header>
+        <navbar>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#game">Game</a></li>
+            </ul>
+        </navbar>
+    </header>
+
+    <main>
+        <section id="home" class="content-section">
+            <h1>Memory Game</h1>
+            <h2><u>Objective</u></h2>
+            <p>The objective of the game is to find all the matching pairs of cards</p>
+
+            <h2><u>Set Up of the game</u></h2>
+            <ol>
+                <li>The game board consist of 16 cards arranged in a 4x4 grid</li>
+                <li>Each card has a front side and a back side. The back side displays a unique letter(A-H) that forms a pair with one other card.</li>
+                <li>At the start of the game, all cards are placed face down.</li>
+            </ol>
+            <h2><u>How to play</u></h2>
+            <ol>
+                <li>Click on any two cards to flip them over and reveal the letters on their back sides.</li>
+                <li>If the letters on the two flipped cards match, those cards will remain face up,indicating they have been successfully matched.</li>
+                <li>. If the letters do not match, the cards will flip back over to their face-down position after a short delay</li>
+                <li>Continue flipping pairs of cards until all matching pairs have been found.</li>
+            </ol>
+        </section>
+
+        <section id="rules" class="content-section">
+            <h2><u>Rules</u></h2>
+            <ol>
+                <li>Only two cards can be flipped at a time</li>
+                <li>If two flipped cards do not match, they will be flipped back over after 1 second.</li>
+                <li>The game ends when all pairs have been successfully matched</li>            
+            </ol>
+        </section>
+
+        <section id="tips" class="content-section">
+            <h2><u>Tips</u></h2>
+            <ul>
+                <li>Try to remember the positions and letters of previously flipped cards to find matches more efficiently.</li>
+                <li>Start by flipping over different pairs each time to gain more information about the card positions.</li>
+                <li><i>You win the game when you have successfully matched all 8 pairs of cards, and all cards are face up.</i></li>
+            </ul>
+        </section>
+    
+        <section id="game" class="game-section">
+            <div class="container">
+                <h1>Enjoy the Game</h1>
+                
+                <div class="stats">
+                    <div class="matches">Matched Pairs: <span id="matches">0</span>/8</div>
+                </div>
+                
+                <div id="game-board" class="game-board"></div>
+                
+                <div id="message" class="message hidden">
+                    <p>Congratulations! You've found all the matches!</p>
+                </div>
+                
+                <button id="reset-button" class="reset-button">Reset Game</button>
+            </div>
+        </section>
+    
+    </main>
+    <footer>
+        <p>&copy; 2025 Orapeleng Madibela</p>
+    </footer>
+    <script src="memory-game.js"></script>
+</body>
+</html>
